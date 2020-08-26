@@ -51,6 +51,12 @@ public class Persona
         nombre = "Sin nombre";
         apellido = "Sin apellido";
     }
+
+    @Override
+    public String toString()
+    {
+        return "Persona, DNI: " + dni + ", nombre: " + nombre + ", apellido:" + apellido;
+    }
     
     
 }
