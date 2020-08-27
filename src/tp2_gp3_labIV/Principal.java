@@ -1,5 +1,7 @@
 package tp2_gp3_labIV;
 
+import java.util.Set;
+
 public class Principal
 {
     
@@ -15,5 +17,17 @@ public class Principal
             file.fileCreate();
         }
         
+        
+        //Christian
+		try {
+			String ruta = "ruta";
+
+			Lector lector = new Lector();
+			Set<Persona> personas = lector.Leer(ruta);
+
+			System.out.println("Ejecución Correcta");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
     }
 }
