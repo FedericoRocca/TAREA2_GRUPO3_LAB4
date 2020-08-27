@@ -9,7 +9,7 @@ public class Principal
     {
         // Lectura de archivo, path relativo
         Archivo file = new Archivo();
-        file.setPath("files/PersonasEmpresas.txt");
+        file.setPath("files/PersonasEmpresa.txt");
         
         // Si no existe el archivo lo creamos
         if( !file.fileExists() )
