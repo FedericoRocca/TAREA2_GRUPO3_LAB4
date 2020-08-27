@@ -1,14 +1,14 @@
 package tp2_gp3_labIV;
 import java.io.BufferedReader;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Lector {
 	int index, contador, dni;
@@ -56,7 +56,7 @@ public class Lector {
 				in.close();
 			}
 
-			Set<Persona> x = new HashSet<Persona>(persona);
+			Set<Persona> x = new TreeSet<Persona>(persona);
 			return x;
 		} catch (Exception e) {
 			throw new Exception(e.getMessage());

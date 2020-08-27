@@ -20,7 +20,7 @@ public class Principal
         
         //Christian
 		try {
-			String ruta = "ruta";
+			String ruta = "files/PersonasEmpresa.txt";
 
 			Lector lector = new Lector();
 			Set<Persona> personas = lector.Leer(ruta);

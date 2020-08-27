@@ -1,6 +1,6 @@
 package tp2_gp3_labIV;
 
-public class Persona
+public class Persona implements Comparable<Persona>
 {
     private int dni;
     private String nombre;
@@ -90,6 +90,15 @@ public class Persona
 		} else if (!nombre.equals(other.nombre))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(Persona o) {
+		if(this.nombre.equals(o.nombre))
+			return 0;
+		if(this.nombre.compareTo(o.nombre)>0)
+			return -1;
+		return 1;
 	}
     
 }
