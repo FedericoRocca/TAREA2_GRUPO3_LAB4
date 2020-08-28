@@ -1,0 +1,12 @@
+DNI: 87654321, nombre: Sofía Sosa
+DNI: 34562789, nombre: Pablo Ramírez
+DNI: 34607875, nombre: María Rodríguez
+DNI: 93756175, nombre: Lucía Romero
+DNI: 64537294, nombre: David García
+DNI: 36857456, nombre: Daniela Sánchez
+DNI: 34251424, nombre: Daniel Torres
+DNI: 12345678, nombre: Carla Martínez
+DNI: 35984697, nombre: Alvaro Ruiz
+DNI: 43215678, nombre: Alejandro Flores
+DNI: 32967574, nombre: Alba González
+DNI: 73634125, nombre: Adrián López

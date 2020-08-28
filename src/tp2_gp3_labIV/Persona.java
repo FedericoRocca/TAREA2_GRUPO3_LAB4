@@ -63,7 +63,7 @@ public class Persona implements Comparable<Persona>
     @Override
     public String toString()
     {
-        return "Persona, DNI: " + dni + ", nombre: " + nombre + " " + apellido;
+        return "DNI: " + dni + ", nombre: " + nombre + " " + apellido;
     }
     
 	@Override

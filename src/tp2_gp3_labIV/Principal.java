@@ -21,6 +21,18 @@ public class Principal
                 System.out.println(persona);
             }
 			System.out.println("Ejecución Correcta");
+			
+			// Guardamos el archivo
+			String rutaResultado = "files/Resultado.txt";
+			System.out.println("Guardamos el nuevo archivo en: " + rutaResultado);
+			Archivo writer = new Archivo();
+			writer.setPath(rutaResultado);
+			writer.fileCreate();
+			for (Persona persona : personas)
+            {
+                writer.writeByLine(persona.toString()+"\n");
+            }
+			System.out.println("Archivo guardado");
 		}
 		catch (Exception e) 
 		{
