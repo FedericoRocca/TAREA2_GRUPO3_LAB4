@@ -15,7 +15,7 @@ public class Lector {
 	String nombre = "";
 	String apellido = "";
 
-	public Set<Persona> Leer(String ruta) throws Exception {
+	public Set<Persona> Leer(String ruta) throws Exception, invalidDNIex {
 		try {
 			List<Persona> persona = new ArrayList<>();
 			String linea = "";
@@ -24,7 +24,6 @@ public class Lector {
 			BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(ruta), "utf-8"));
 			try {
 				while ((linea = in.readLine()) != null) {
-					//System.out.println(linea);
 					index = 0;
 					contador = 0;
 					while (contador < 3) {
@@ -45,14 +44,25 @@ public class Lector {
 						}
 						contador++;
 					}
-					//System.out.println(nombre + " " + apellido + " " + dni);
-					Persona p = new Persona(dni,nombre, apellido);
-					persona.add(p);
-					p = null;
+					
+					try
+                    {
+					    Persona p = new Persona(dni, nombre, apellido);
+					    persona.add(p);
+	                    p = null;
+                    }
+					catch (invalidDNIex dniEX)
+		            {
+		                
+		            }
 				}
-			} catch (Exception e) {
+			} 
+			catch (Exception e) 
+			{
 				throw new Exception(e.getMessage());
-			} finally {
+			} 
+			finally 
+			{
 				in.close();
 			}
 

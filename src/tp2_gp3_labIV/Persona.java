@@ -11,8 +11,12 @@ public class Persona implements Comparable<Persona>
         return dni;
     }
 
-    public void setDni(int dni)
+    public void setDni(int dni) throws invalidDNIex
     {
+        if( dni < 9999999 || dni > 99999999 )
+        {
+            throw new invalidDNIex();
+        }
         this.dni = dni;
     }
 
@@ -36,9 +40,13 @@ public class Persona implements Comparable<Persona>
         this.apellido = apellido;
     }
     
-    public Persona(int dni, String nombre, String apellido)
+    public Persona(int dni, String nombre, String apellido) throws invalidDNIex
     {
         super();
+        if( dni < 9999999 || dni > 99999999 )
+        {
+            throw new invalidDNIex();
+        }
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -55,7 +63,7 @@ public class Persona implements Comparable<Persona>
     @Override
     public String toString()
     {
-        return "Persona, DNI: " + dni + ", nombre: " + nombre + ", apellido:" + apellido;
+        return "Persona, DNI: " + dni + ", nombre: " + nombre + " " + apellido;
     }
     
 	@Override

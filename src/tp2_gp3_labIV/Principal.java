@@ -7,26 +7,24 @@ public class Principal
     
     public static void main(String[] args)
     {
-        // Lectura de archivo, path relativo
-        Archivo file = new Archivo();
-        file.setPath("files/PersonasEmpresa.txt");
-        
-        // Si no existe el archivo lo creamos
-        if( !file.fileExists() )
-        {
-            file.fileCreate();
-        }
-        
-        
-        //Christian
-		try {
+		try 
+		{
+		    // Abrimos archivo
 			String ruta = "files/PersonasEmpresa.txt";
 
+			// Cargamos el archivo en una lista, ordenado de Z a A, sin duplicados
 			Lector lector = new Lector();
 			Set<Persona> personas = lector.Leer(ruta);
-
+			
+			for (Persona persona : personas)
+            {
+                System.out.println(persona);
+            }
 			System.out.println("Ejecución Correcta");
-		} catch (Exception e) {
+		}
+		catch (Exception e) 
+		{
+		    System.out.println("Se produjo la siguiente excepción: ");
 			System.out.println(e.getMessage());
 		}
     }
